@@ -1,0 +1,106 @@
+<head>
+    <style>
+        .border-draw {
+          position: relative;
+          display: inline-block;
+          padding: 1rem 2rem;
+          border: 2px solid transparent;
+        }
+      
+        .border-draw::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          width: 0;
+          height: 2px;
+          background: rgb(161, 253, 196)          ;
+          animation: borderTop 0.5s forwards ease-out;
+        }
+      
+        .border-draw::after {
+          content: '';
+          position: absolute;
+          top: 0; right: 0;
+          width: 2px;
+          height: 0;
+          background: rgb(161, 253, 196)          ;
+          animation: borderRight 0.5s forwards ease-out 0.5s;
+        }
+      
+        .border-draw .bottom-border {
+          content: '';
+          position: absolute;
+          bottom: 0; right: 0;
+          width: 0;
+          height: 2px;
+          background: rgb(161, 253, 196)          ;
+          animation: borderBottom 0.5s forwards ease-out 1s;
+        }
+      
+        .border-draw .left-border {
+          content: '';
+          position: absolute;
+          bottom: 0; left: 0;
+          width: 2px;
+          height: 0;
+          background: rgb(161, 253, 196);
+          animation: borderLeft 0.5s forwards ease-out 1.5s;
+        }
+      
+        @keyframes borderTop {
+          to { width: 100%; }
+        }
+      
+        @keyframes borderRight {
+          to { height: 100%; }
+        }
+      
+        @keyframes borderBottom {
+          to { width: 100%; }
+        }
+      
+        @keyframes borderLeft {
+          to { height: 100%; }
+        }
+      </style>
+      
+      
+      
+</head>
+<section class="relative h-screen flex items-center justify-center text-white overflow-hidden">
+    <!-- Imagen de fondo centrada -->
+    <img src="assets/image/diseño.png" alt="diseño" class="absolute h-screen w-screen" />
+  
+    <!-- Texto encima -->
+    <div class="relative z-10 pr-10">
+        <div class="border-draw">
+          <h1 class="text-4xl font-normal relative z-10">Construyendo carrera profesional como</h1>
+          <h2 class="text-3xl font-bold relative z-10 text-center">Desarrollador full stack</h2>
+          <span class="bottom-border"></span>
+          <span class="left-border"></span>
+        </div>
+      </div>
+  </section>
+  
+  <section class="h-screen p-10 pt-35 grid-cols-1 gap-2 items-center bg-[#a1fdc4] justify-center text-gray-800 text-wrap">
+    <h1 class="text-4xl font-bold text-center pb-5">Quien soy</h1>
+    <div class="p-5 text-xl text-balance max-w-5xl ">
+      <p>
+        Bienvenidos. 
+        Soy un joven desarollador Full stack el cual tiene mucho entusiasmo por trabajar y mejorar cada día en las distintas areas del desarollo. 
+        Cuento con un buen desempeño de trabajo en equipo y una rápida capacidad de aprendizaje.
+        Con ganas de aprender y trabajar sobre tegnologías efectivas y funcionales tanto para la experiencia y la vista de usuario.
+        Este portafolio esta hecho sobre Angular y TailwindCSS.
+      </p>
+    </div>
+
+    <h1 class="text-3xl font-bold p-5">Diseñador jr.</h1>
+    <div class="p-5 text-xl text-balance">
+      <p>
+        Cuento con 3 años y contando aprendiendo tanto de instituciones como autodidacta.
+      </p>
+    </div>
+  </section>
+  <section class="h-screen flex items-center justify-center text-white">
+    <h1 class="text-4xl font-bold">Sección 3</h1>
+  </section>
