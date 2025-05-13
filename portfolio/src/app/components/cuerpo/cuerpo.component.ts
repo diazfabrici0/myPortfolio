@@ -6,11 +6,15 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { Seccion1Component } from '../seccion1/seccion1.component';
 import { SobreMiComponent } from '../sobre-mi/sobre-mi.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ContactoComponent } from '../contacto/contacto.component';
 
 
 @Component({
   selector: 'app-cuerpo',
-  imports: [CommonModule, RouterModule,  SliderComponent, ProyectosComponent, SidebarComponent, Seccion1Component, SobreMiComponent],
+  imports: [
+    CommonModule, RouterModule,  SliderComponent, ProyectosComponent,
+    SidebarComponent, Seccion1Component, SobreMiComponent, ContactoComponent
+  ],
   templateUrl: './cuerpo.component.html',
   styleUrl: './cuerpo.component.css'
 })
