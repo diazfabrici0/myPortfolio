@@ -7,20 +7,20 @@
     </div>
      <!-- Navegación -->
   <nav class="flex-1 px-4 space-y-4 text-xl pl-10">
-    <a href="#inicio" class="flex items-center space-x-2 text-teal-400 font-semibold">
-      <i class="fas fa-home"></i><span>Inicio</span>
+    <a [routerLink]="['/']" fragment="inicio" class="flex items-center space-x-2 hover:text-teal-400 font-semibold">
+      <span>Inicio</span>
     </a>
-    <a href="#sobre-mi" class="flex items-center space-x-2 hover:text-teal-400">
-      <i class="fas fa-user"></i><span>Sobre mí</span>
+    <a [routerLink]="['/']" fragment="sobre-mi" class="flex items-center space-x-2 hover:text-teal-400">
+      <span>Sobre mí</span>
     </a>
-    <a href="#habilidades" class="flex items-center space-x-2 hover:text-teal-400">
-      <i class="fas fa-tools"></i><span>Habilidades</span>
+    <a [routerLink]="['/']" fragment="habilidades" class="flex items-center space-x-2 hover:text-teal-400">
+      <span>Habilidades</span>
     </a>
-    <a href="#proyectos" class="flex items-center space-x-2 hover:text-teal-400">
-      <i class="fas fa-briefcase"></i><span>Proyectos</span>
+    <a [routerLink]="['/']" fragment="proyectos" class="flex items-center space-x-2 hover:text-teal-400">
+      <span>Proyectos</span>
     </a>
     <a href="#contacto" class="flex items-center space-x-2 hover:text-teal-400">
-      <i class="fas fa-envelope"></i><span>Contacto</span>
+     <span>Contacto</span>
     </a>
   </nav>
 

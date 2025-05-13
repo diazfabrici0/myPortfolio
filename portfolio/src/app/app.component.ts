@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CuerpoComponent } from './components/cuerpo/cuerpo.component';
 import { LayoutComponent } from './components/layout/layout.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, CommonModule, SidebarComponent, CuerpoComponent, LayoutComponent],
+  imports: [RouterOutlet, RouterModule, CommonModule, CuerpoComponent, LayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true

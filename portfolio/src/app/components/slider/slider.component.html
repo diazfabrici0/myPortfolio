@@ -1,16 +1,16 @@
+<div class="relative text-4xl font-bold text-center pb-5 top-0">
+  <h1>HABILIDADES</h1>
+</div>
 <div class="relative w-full h-[50%] overflow-hidden">
-   
-  
-    <div class="flex transition-transform duration-500 ease-in-out"
+  <div class="flex transition-transform duration-500 ease-in-out"
       [ngStyle]="{ 'transform': 'translateX(-' + currentSlide * itemWidth + 'px)' }"
       [style.width.px]="images.length  * itemWidth">
   
-      <div *ngFor="let image of images"
-        class="flex justify-center items-center"
-        [style.width.px]="itemWidth">
-  
-        <img [src]="image" alt="tecnología" class="max-w-[160px] h-40 object-contain" />
-      </div>
+    <div *ngFor="let image of images"
+      class="flex justify-center items-center"
+      [style.width.px]="itemWidth">
+      <img [src]="image" alt="tecnología" class="max-w-[150px] h-40 object-contain" />
     </div>
   </div>
+</div>
   

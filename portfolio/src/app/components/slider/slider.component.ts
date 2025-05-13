@@ -32,9 +32,9 @@ export class SliderComponent {
 
   currentSlide = 0;
 
-  itemWidth = 358; // mismo valor que en CSS (max-w-[180px])
+  itemWidth = 330; 
 
-  visibleCount = Math.floor(window.innerWidth / this.itemWidth); // valor por defecto
+  visibleCount = Math.floor(window.innerWidth / this.itemWidth); 
 
   @HostListener('window:resize', ['$event'])
   onResize() {
