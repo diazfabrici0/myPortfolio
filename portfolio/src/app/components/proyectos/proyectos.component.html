@@ -10,3 +10,21 @@
     </div>
   </div>
 </div>
+
+<!--Modal de los proyectos-->
+<div *ngIf="proyectoSeleccionado" class="fixed inset-0 flex justify-center items-center z-50" id="modal-overlay" [class.open]="proyectoSeleccionado">
+  <div class="bg-black fixed inset-0 opacity-50">
+  </div>
+  <div class="bg-white p-6 rounded shadow-xl max-w-md w-full relative" id="modal-content">
+    <button (click)="cerrarModal()" class="absolute top-2 right-2 text-gray-600">
+      &times;</button>
+      <img [src]="proyectoSeleccionado.imagen" alt="{{ proyectoSeleccionado.titulo }}" class="w-full object-cover rounded">
+    
+    <h2 class="text-2xl font-semibold mt-4">{{ proyectoSeleccionado.titulo }}</h2>
+    <p class="mt-2">{{ proyectoSeleccionado.descripcion }}</p>
+    <h3 class="mt-4 font-bold">Tecnologías:</h3>
+    <ul class="list-disc list-inside">
+      <li *ngFor="let tech of proyectoSeleccionado.tecnologias">{{ tech }}</li>
+    </ul>
+  </div>
+</div>

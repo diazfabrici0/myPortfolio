@@ -28,6 +28,12 @@ export class ProyectosComponent {
       descripcion: "Una aplicacion en la cual se puede hacer una lista de actividades pendientes las cuales pueden ser marcadas como cumplidas, eliminadas y editadas",
       imagen: "",
       tecnologias: ["React, Tailwind"],
+    },
+    {
+      titulo: "Carta Fratelli",
+      descripcion: "Carta digital editable para el bar cervezero Frateli",
+      imagen:"",
+      tecnologias: ["React, Tailwind, Node.js"]
     }
   ];
 

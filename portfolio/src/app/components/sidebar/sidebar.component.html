@@ -6,32 +6,40 @@
       <h2 class="text-3xl font-semibold">Fabricio Diaz</h2>
     </div>
      <!-- Navegación -->
-  <nav class="flex-1 px-4 space-y-4 text-xl pl-10">
+  <nav class="flex-1  px-4 space-y-4 text-xl pl-10">
+
     <a [routerLink]="['/']" fragment="inicio" class="flex items-center space-x-2 hover:text-teal-400">
+       <fa-icon [icon]="faHouse"></fa-icon>
       <span>Inicio</span>
     </a>
+
     <a [routerLink]="['/']" fragment="sobre-mi" class="flex items-center space-x-2 hover:text-teal-400">
+      <fa-icon [icon]="faUser"></fa-icon>
       <span>Sobre mí</span>
     </a>
+    
     <a [routerLink]="['/']" fragment="habilidades" class="flex items-center space-x-2 hover:text-teal-400">
+       <fa-icon [icon]="faCode"></fa-icon>
       <span>Habilidades</span>
     </a>
+    
     <a [routerLink]="['/']" fragment="proyectos" class="flex items-center space-x-2 hover:text-teal-400">
+      <fa-icon [icon]="folder"></fa-icon>
       <span>Proyectos</span>
     </a>
-    <a href="#contacto" class="flex items-center space-x-2 hover:text-teal-400">
+    
+    <a [routerLink]="['/']" fragment="contacto" class="flex items-center space-x-2 hover:text-teal-400">
+      <fa-icon [icon]="faEnvelope"></fa-icon>
      <span>Contacto</span>
     </a>
   </nav>
 
   <!-- Botón y redes -->
   <div class="px-6 py-6 text-center">
-    <a href="ruta-a-cv.pdf" target="_blank" class="bg-[#a1fdc4] text-[#14213d] font-semibold px-4 py-2 rounded-full">Ver Curriculum</a>
+    <a href="assets/documentos/curriculumFabricio.pdf" target="_blank" class="bg-[#a1fdc4] text-[#14213d] font-semibold px-4 py-2 rounded-full">Ver Curriculum</a>
     <div class="flex justify-center space-x-4 mt-4 text-2xl">
-      <a href="#" class="hover:text-teal-400"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="hover:text-teal-400"><i class="fab fa-github"></i></a>
-      <a href="#" class="hover:text-teal-400"><i class="fab fa-linkedin"></i></a>
-      <a href="#" class="hover:text-teal-400"><i class="fab fa-codepen"></i></a>
+      <a href="https://github.com/diazfabrici0" target="_blank" class="hover:text-teal-400"><fa-icon [icon]="faGithub"></fa-icon></a>
+      <a href="https://www.linkedin.com/in/fabricio-diaz-077005321/" target="_blank" class="hover:text-teal-400"><fa-icon [icon]="faLinkedin"></fa-icon></a>
     </div>
   </div>
  </div>

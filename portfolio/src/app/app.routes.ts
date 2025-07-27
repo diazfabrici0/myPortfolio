@@ -5,6 +5,7 @@ import { Seccion1Component } from './components/seccion1/seccion1.component';
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 export const routes: Routes = [
@@ -13,7 +14,8 @@ export const routes: Routes = [
     {path: 'inicio', component: Seccion1Component},
     {path: 'sobre-mi', component: SobreMiComponent},
     {path: 'habilidades', component: SliderComponent},
-    {path: 'proyectos', component: ProyectosComponent}
+    {path: 'proyectos', component: ProyectosComponent},
+    {path: 'contacto', component: ContactoComponent}
 ];
 
 const routerOptions: ExtraOptions = {
