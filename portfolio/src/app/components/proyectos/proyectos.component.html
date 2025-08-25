@@ -38,7 +38,7 @@
   </div>
 
   <!-- Botón ver más en móvil -->
-  <div class="text-center mt-4 md:hidden" *ngIf="proyectos.length > 1">
+  <div class="text-center mt-4 lg:hidden" *ngIf="proyectos.length > 1">
     <button (click)="toggleMostrarTodos()"
             class="bg-[#a1fdc4] text-black font-medium px-5 py-2 rounded-3xl shadow hover:scale-105 transition-transform duration-200">
       {{ mostrarTodos ? 'Ver menos' : 'Ver más' }}
