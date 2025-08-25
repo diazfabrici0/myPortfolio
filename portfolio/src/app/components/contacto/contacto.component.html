@@ -1,35 +1,38 @@
-<div class="relative text-4xl font-bold text-center pb-5 top-0 pt-10">
+<div class="relative md:text-5xl text-4xl font-light text-white text-center pb-5 top-0 pt-20 ">
   <h1>CONTACTO</h1>
 </div>
-<div class="top-0 p-10">
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="grid grid-cols-6 gap-3 gap-y-15 py-15">
+<div class="top-0 md:px-35 md:py-40 p-5 grid md:grid-cols-2 md:gap-1 gap-10">
+  <p class="md:text-5xl text-white font-extralight text-2xl">Estaria encantado colaborar con tu proyecto o equipo! </p>
+  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-10">
+  <label for="name" class="block mb-2 text-white">Nombre</label>
   <input
-    class="border-2 p-2  w-full max-w-[100%] border-[#14213d] rounded-r-xl col-span-3"
+    class="border-0 border-b-2 p-2 w-full border-[#011441] max-w-[100%] focus:border-[#284280] focus:border-b-3 bg-[#ffffff2c] col-span-3 focus:outline-none placeholder-white/50"
     type="text"
     name="name"
     [(ngModel)]="formData.name"
-    placeholder="Tu nombre"
-    required
-  />
-
-  <input
-    class="border-2 p-2 w-full max-w-[100%]  border-[#14213d] rounded-l-xl col-span-3"
-    type="email"
-    name="email"
-    [(ngModel)]="formData.email"
-    placeholder="Tu correo"
+    placeholder="Ingrese su nombre"
     required
   />
   
+  <label for="email" class="block mb-2 text-white">Mail</label>
+  <input
+    class="border-0 border-b-2 p-2 w-full border-[#011441] max-w-[100%] focus:border-[#284280] focus:border-b-3 bg-[#ffffff2c] col-span-3 focus:outline-none placeholder-white/50"
+    type="email"
+    name="email"
+    [(ngModel)]="formData.email"
+    placeholder="Ingrese su mail"
+    required
+  />
+  
+  <label for="message" class="block mb-2 text-white">Mensaje</label>
   <textarea
-    class="resize-none border-2 p-2 w-full max-w-[100%] h-50 border-[#14213d] rounded-b-xl col-span-6"
+    class="resize-none border-0 border-b-2 p-2 w-full border-[#011441] max-w-[100%] md:h-35 bg-[#ffffff2c] focus:border-[#284280] focus:border-b-3 col-span-6 focus:outline-none placeholder-white/50"
     name="message"
     [(ngModel)]="formData.message"
-    placeholder="Tu mensaje"
+    placeholder="Escriba un mensaje"
     required
   ></textarea>
-
-  <button type="submit" class="bg-[#243c70] w-full text-white px-4 py-2 rounded-3xl hover:bg-[#14213d] col-start-3 col-end-5">
+  <button type="submit" class="bg-[#243c70] w-full text-white px-4 py-2 rounded-3xl hover:bg-[#14213d] hover:scale-105 transition-transform duration-200 col-start-3 col-end-5">
     Enviar
   </button>
 </form>

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Host, HostListener, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faHouse, faUser, faCode, faFolderOpen, faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faUser, faCode, faFolderOpen, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   
 @Component({
@@ -40,5 +40,4 @@ export class SidebarComponent implements OnInit {
   faEnvelope = faEnvelope;
   faGithub = faGithub; 
   faLinkedin = faLinkedin;
-  faBars = faBars;
 }

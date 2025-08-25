@@ -1,87 +1,93 @@
-        .list ul li {
-    list-style: none;
-    width: 100%;
-    color: #14213d;
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    padding-left: 40px;
-    min-height: 30px; /* asegurate de que tenga altura */
-  }
-  
-  .list ul li::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: #a1fdc4;
-    border: 5px solid #14213d;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 1;
-    transform: rotate(45deg);
-  }
-
-  .list ul li::after {
-    content: "";
-    width: 5px;
-    height: 65px;
-    background-color: #14213d;
-    position: absolute;
-    top: 25px;
-    left: 7px;
-    z-index: 0;
-    margin: auto;
-  }
-
-  .list ul li:last-child::after {
-    content: "";
-    width: 0;
-    height: 0;
-  }
-
-  #list2 ul li::before{
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: #a1fdc4;
-    border: 5px solid #14213d;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 1;
-    transform: rotate(45deg);
-  }
-
+  @media (max-width: 768px) {
+  .list ul li::before,
+  .list ul li::after,
+  #list2 ul li::before,
   #list2 ul li::after {
-    content: "";
-    width: 5px;
-    height: 68px;
-    background-color: #14213d;
-    position: absolute;
-    top: 24px;
-    left: 7.5px;
-    z-index: 0;
-    margin: auto;
+    content: none !important;
   }
 
+  .list ul li,
   #list2 ul li {
-    list-style: none;
-    width: 100%;
-    color: #14213d;
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    padding-left: 40px;
-    min-height: 10px; /* asegurate de que tenga altura */
+    padding-left: 0 !important;
+    margin: 8px 0;
   }
+}
 
-  #list2 ul li:last-child::after {
-    content: "";
-    width: 0;
-    height: 0;
-  }
+
+ .list {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 50px; 
+}
+
+.list ul li {
+  list-style: none;
+  position: relative;
+  margin: 20px 0;
+  padding-left: 40px;
+  min-height: 30px;
+  color: #ffffff;
+}
+
+/* Diamante */
+.list ul li::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: #03284b;
+  border: 3px solid #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+/* Diamante */
+.listMobile ul li::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #03284b;
+  border: 2px solid #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.listMobile ul li {
+  list-style: none;
+  position: relative;
+  margin: 20px 0;
+  padding-left: 40px;
+  min-height: 30px;
+  color: #ffffff;
+}
+
+
+
+/* Línea */
+.list ul li::after {
+  content: "";
+  width: 3px;
+  height: 65px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 10px;
+  left: 7px;
+  z-index: 0;
+}
+
+/* Último elemento sin línea */
+.list ul li:last-child::after {
+  content: none;
+}
+
+

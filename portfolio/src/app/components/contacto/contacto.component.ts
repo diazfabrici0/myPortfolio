@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contacto',
@@ -23,9 +24,17 @@ export class ContactoComponent {
   onSubmit(){
     this.http.post("https://formspree.io/f/mldbzopw", this.formData)
       .subscribe(() => {
-        alert('mensaje enviado');
+      Swal.fire({
+        title: "Mensaje enviado!",
+        icon: "success",
+        draggable: true
+      });
       }, () => {
-        alert('error al enviar el mensaje.');
+        Swal.fire({
+          icon: "error",
+          title: "Ups...",
+          text: "Algo salio mal!"
+        });;
       });
   }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -7,7 +7,9 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })
-export class SliderComponent {
+export class SliderComponent implements AfterViewInit {
+  @ViewChild('sliderContainer') sliderContainer!: ElementRef;
+
   images = [
     'assets/image/angular.png',
     'assets/image/bootstrap.png',
@@ -26,35 +28,50 @@ export class SliderComponent {
     'assets/image/typescript.png',
   ];
 
-  ngOnInit(){
-    setInterval(() => this.nextSlide(), 1500)
-  }
-
   currentSlide = 0;
+  itemWidth = 200;         // se recalcula al inicio
+  visibleCount = 1;        // cantidad de imágenes visibles a la vez
 
-  itemWidth = 330; 
+  ngOnInit() {
+    setInterval(() => this.nextSlide(), 1500);
+  }
 
-  visibleCount = Math.floor(window.innerWidth / this.itemWidth); 
+  ngAfterViewInit() {
+    this.updateSlider();
+  }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
-    this.visibleCount = Math.floor(window.innerWidth / this.itemWidth);
+    this.updateSlider();
   }
 
-nextSlide() {
-  if (this.currentSlide < this.images.length - this.visibleCount) {
-    this.currentSlide++;
-  } else {
-    this.currentSlide = 0; // Reinicia al llegar al final
-  }
-}
+  updateSlider() {
+    const containerWidth = this.sliderContainer.nativeElement.offsetWidth;
 
-prevSlide() {
-  if (this.currentSlide > 0) {
-    this.currentSlide--;
-  } else {
-    this.currentSlide = this.images.length - this.visibleCount;
-  }
-}
+    if (containerWidth < 500) {
+      this.itemWidth = containerWidth / 2;    // 2 visibles en mobile
+    } else if (containerWidth < 900) {
+      this.itemWidth = containerWidth / 3;    // 3 visibles en tablet
+    } else {
+      this.itemWidth = containerWidth / 4;    // 4 visibles en desktop
+    }
 
+    this.visibleCount = Math.floor(containerWidth / this.itemWidth);
+  }
+
+  nextSlide() {
+    if (this.currentSlide < this.images.length - this.visibleCount) {
+      this.currentSlide++;
+    } else {
+      this.currentSlide = 0;
+    }
+  }
+
+  prevSlide() {
+    if (this.currentSlide > 0) {
+      this.currentSlide--;
+    } else {
+      this.currentSlide = this.images.length - this.visibleCount;
+    }
+  }
 }

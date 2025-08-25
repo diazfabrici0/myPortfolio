@@ -5,10 +5,11 @@ import { CuerpoComponent } from './components/cuerpo/cuerpo.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faCoffee} from '@fortawesome/free-solid-svg-icons';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, CommonModule, CuerpoComponent, LayoutComponent, FontAwesomeModule],
+  imports: [RouterOutlet, RouterModule, CommonModule, CuerpoComponent, LayoutComponent, FontAwesomeModule, SweetAlert2Module],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
